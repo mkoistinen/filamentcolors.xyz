@@ -4,7 +4,8 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@filamentcolors">
 <meta name="twitter:site" content="@filamentcolors">
-<meta name="twitter:title" content="{{ swatch.manufacturer.name }} - {{ swatch.color_name }} {{ swatch.filament_type.name }}">
+<meta name="twitter:title"
+      content="{{ swatch.manufacturer.name }} - {{ swatch.color_name }} {{ swatch.filament_type.name }}">
 <meta name="twitter:description" content="{{ swatch.notes }}">
 <meta name="twitter:image:src" content="https://filamentcolors.xyz{{ swatch.card_img.url }}">
 <meta name="twitter:image:width" content="280">
@@ -121,9 +122,17 @@
                 <div class="row border-between">
                     <div class="col-sm-6">
                         Pure complement:
-                        <div class="container text-center">
-                            <div class="big-color-cube" style="background-color:#{{ swatch.complement_hex }};"></div>
-                            <div>#{{ swatch.complement_hex }}</div>
+                        <div class="container text-center bump-down">
+                            <div class="complement-box invisibox">
+                                <h6>&nbsp;</h6>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="big-color-cube"
+                                             style="background-color:#{{ swatch.complement_hex }}; float:right; left: 1em; bottom: 0.5em;"></div>
+                                    </div>
+                                    <div class="col-6 text-left">#{{ swatch.complement_hex }}</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -144,7 +153,8 @@
                                     </div>
                                 </a>
                                 <div style="font-size: smaller;"><a href="/about/#why-is-color-hard"
-                                                                    style="color: LightGray"><u>why is this probably wrong?</u></a></div>
+                                                                    style="color: LightGray"><u>why is this probably
+                                    wrong?</u></a></div>
                             </div>
 
                         {% endif %}

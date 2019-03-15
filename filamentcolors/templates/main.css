@@ -218,6 +218,10 @@ body {
     border-radius: 5px;
 }
 
+.invisibox {
+    border-color: white;
+}
+
 .nav-item {
     padding-left: 25px;
 }
