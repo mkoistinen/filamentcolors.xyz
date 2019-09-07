@@ -147,6 +147,14 @@ Django = ">=1.5.0"
 
 [[package]]
 category = "main"
+description = "Web APIs for Django, made easy."
+name = "djangorestframework"
+optional = false
+python-versions = ">=3.5"
+version = "3.10.3"
+
+[[package]]
+category = "main"
 description = "Clean single-source support for Python 3 and 2"
 name = "future"
 optional = false
@@ -546,7 +554,7 @@ python-versions = "*"
 version = "0.1.7"
 
 [metadata]
-content-hash = "d5e730daf5fc04d8e29a966f85550b36fae8e5bb6d1b215c62847863673e306c"
+content-hash = "a5acae1a918693f5492c4fe0390128301ea993c48abc5f63dc1d549c6d0194f4"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -565,6 +573,7 @@ dask = ["8a2c151d5862627c71fdc725760d710b7c037ec57730f453f392b896febfd0d5", "a1f
 decorator = ["2c51dff8ef3c447388fe5e4453d24a2bf128d3a4c32af3fabef1f01c6851ab82", "c39efa13fbdeb4506c476c9b3babf6a718da943dab7811c206005a4a956c080c"]
 django = ["068d51054083d06ceb32ce02b7203f1854256047a0d58682677dd4f81bceabd7", "55409a056b27e6d1246f19ede41c6c610e4cab549c005b62cbeefabc6433356b"]
 django-smartfields = ["4bd7c78059e979467432735a06fbd9d50ab0f6dccddfcde226d4439836acb4a6", "77020d950da77c52d53aab9ae049978ff26339139c5c63ab58268726c18db30e"]
+djangorestframework = ["5488aed8f8df5ec1d70f04b2114abc52ae6729748a176c453313834a9ee179c8", "dc81cbf9775c6898a580f6f1f387c4777d12bd87abf0f5406018d32ccae71090"]
 future = ["67045236dcfd6816dc439556d009594abf643e5eb48992e36beac09c2ca659b8"]
 gunicorn = ["aa8e0b40b4157b36a5df5e599f45c9c76d6af43845ba3b3b0efe2c70473c2471", "fa2662097c66f920f53f70621c6c58ca4a3c4d3434205e608e121b5b3b71f4f3"]
 idna = ["c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407", "ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"]
