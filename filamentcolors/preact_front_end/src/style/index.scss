@@ -1,14 +1,18 @@
+//$mdc-layout-grid-breakpoints: (desktop: 992px, tablet: 576px, phone: 0px) !default;
+//$mdc-layout-grid-max-width: 1440;
+@import '~preact-material-components/material-components-web.scss';
+
 html, body {
-	height: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	background: #FAFAFA;
-	font-family: 'Helvetica Neue', arial, sans-serif;
-	font-weight: 400;
-	color: #444;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue', arial, sans-serif;
+  font-weight: 400;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --mdc-theme-primary: #f8f9fa;
 }
 
 /* fallback */
@@ -36,16 +40,16 @@ html, body {
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #app {
-	height: 100%;
+  height: 100%;
 }
 
 .mdc-theme--dark {
-	background-color: #333;
-	color: #fff;
+  background-color: #333;
+  color: #fff;
 }
 
 .mdc-theme--dark .mdc-card {
@@ -54,4 +58,10 @@ html, body {
 
 #app .page {
   padding-top: 56px;
+}
+
+:root {
+  //--mdc-theme-primary: #f8f9fa;
+  //@include mdc-top-app-bar-ink-color(#000000);
+  //@include mdc-top-app-bar-fill-color(#f8f9fa);
 }

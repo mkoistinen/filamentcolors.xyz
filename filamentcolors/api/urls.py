@@ -5,7 +5,7 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 
-router.register(r'filamenttype', FilamentTypeViewSet, basename='filament_type')
+router.register(r'filamenttype', FilamentTypeViewSet, basename='filamenttype')
 router.register(r'swatch', SwatchViewSet, basename='swatch')
 router.register(r'manufacturer', ManufacturerViewSet, basename='manufacturer')
 

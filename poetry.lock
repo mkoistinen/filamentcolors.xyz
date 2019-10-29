@@ -136,6 +136,17 @@ pytz = "*"
 
 [[package]]
 category = "main"
+description = "django-cors-headers is a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS)."
+name = "django-cors-headers"
+optional = false
+python-versions = ">=3.5"
+version = "3.1.0"
+
+[package.dependencies]
+Django = ">=1.11"
+
+[[package]]
+category = "main"
 description = "Django Model Fields that are smart."
 name = "django-smartfields"
 optional = false
@@ -554,7 +565,7 @@ python-versions = "*"
 version = "0.1.7"
 
 [metadata]
-content-hash = "a5acae1a918693f5492c4fe0390128301ea993c48abc5f63dc1d549c6d0194f4"
+content-hash = "82609842ac51cf93b8d3131b7532fb7cd91f516faed725fcdaf5ca3904a7560a"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -572,6 +583,7 @@ cycler = ["1d8a5ae1ff6c5cf9b93e8811e581232ad8920aeec647c37316ceac982b08cb2d", "c
 dask = ["8a2c151d5862627c71fdc725760d710b7c037ec57730f453f392b896febfd0d5", "a1fa4a3b2d7ce4dd0c68db4b68dadf2c283ff54d98bd72c556fc462000449ff7"]
 decorator = ["2c51dff8ef3c447388fe5e4453d24a2bf128d3a4c32af3fabef1f01c6851ab82", "c39efa13fbdeb4506c476c9b3babf6a718da943dab7811c206005a4a956c080c"]
 django = ["068d51054083d06ceb32ce02b7203f1854256047a0d58682677dd4f81bceabd7", "55409a056b27e6d1246f19ede41c6c610e4cab549c005b62cbeefabc6433356b"]
+django-cors-headers = ["e4b12209b3a0bc577883fe0ac0aa3adac9e82742389f8ddb6c6b41c66b1e9c4f", "e69b1c909f2eddc7ef2a24f071583bc22b73b871731ea3370ac52b3318c43b3c"]
 django-smartfields = ["4bd7c78059e979467432735a06fbd9d50ab0f6dccddfcde226d4439836acb4a6", "77020d950da77c52d53aab9ae049978ff26339139c5c63ab58268726c18db30e"]
 djangorestframework = ["5488aed8f8df5ec1d70f04b2114abc52ae6729748a176c453313834a9ee179c8", "dc81cbf9775c6898a580f6f1f387c4777d12bd87abf0f5406018d32ccae71090"]
 future = ["67045236dcfd6816dc439556d009594abf643e5eb48992e36beac09c2ca659b8"]

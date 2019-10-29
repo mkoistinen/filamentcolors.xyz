@@ -4,9 +4,10 @@ from filamentcolors.models import Swatch, Manufacturer, FilamentType
 from filamentcolors.api.serializers import (
     SwatchSerializer,
     ManufacturerSerializer,
-    FilamentTypeSerialier
+    FilamentTypeSerializer
 )
 from filamentcolors.helpers import get_hsv
+
 
 class SwatchViewSet(ReadOnlyModelViewSet):
     serializer_class = SwatchSerializer
@@ -14,6 +15,7 @@ class SwatchViewSet(ReadOnlyModelViewSet):
 
     def get_queryset(self):
         queryset = Swatch.objects.all()
+        # localhost:8000/library/?m=filament_type
         method = self.request.query_params.get('m')  # for method
         if method == 'type':
             queryset = queryset.order_by('filament_type')
@@ -29,13 +31,13 @@ class SwatchViewSet(ReadOnlyModelViewSet):
 
         return queryset
 
+
 class ManufacturerViewSet(ReadOnlyModelViewSet):
     serializer_class = ManufacturerSerializer
     basename = 'manufacturer'
     queryset = Manufacturer.objects.all().order_by(Lower('name'))
 
 class FilamentTypeViewSet(ReadOnlyModelViewSet):
-    serializer_class = FilamentTypeSerialier
-    basename = 'filament_type'
+    serializer_class = FilamentTypeSerializer
+    basename = 'filamenttype'
     queryset = FilamentType.objects.all().order_by(Lower('name'))
-

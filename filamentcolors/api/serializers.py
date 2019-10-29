@@ -3,10 +3,33 @@ from rest_framework.serializers import HyperlinkedModelSerializer
 from filamentcolors.models import Swatch, Manufacturer, FilamentType
 
 
+class FilamentTypeSerializer(HyperlinkedModelSerializer):
+    class Meta:
+        model = FilamentType
+        fields = (
+            'id',
+            'name',
+            'hot_end_temp',
+            'bed_temp'
+        )
+
+
+class ManufacturerSerializer(HyperlinkedModelSerializer):
+    class Meta:
+        model = Manufacturer
+        fields = (
+            'id',
+            'name',
+        )
+
+
 class SwatchSerializer(HyperlinkedModelSerializer):
+    manufacturer = ManufacturerSerializer(read_only=True)
+    filament_type = FilamentTypeSerializer(read_only=True)
     class Meta:
         model = Swatch
         fields = (
+            'id',
             'manufacturer',
             'color_name',
             'filament_type',
@@ -34,22 +57,4 @@ class SwatchSerializer(HyperlinkedModelSerializer):
             'hex_color',
             'complement_hex',
             'date_added_date'
-        )
-
-
-class FilamentTypeSerialier(HyperlinkedModelSerializer):
-    class Meta:
-        model = FilamentType
-        fields = (
-            'name',
-            'hot_end_temp',
-            'bed_temp'
-        )
-
-
-class ManufacturerSerializer(HyperlinkedModelSerializer):
-    class Meta:
-        model = Manufacturer
-        fields = (
-            'name',
         )
