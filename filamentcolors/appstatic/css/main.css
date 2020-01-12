@@ -425,3 +425,29 @@ body {
 #color-scheme-modal {
     padding: 2rem;
 }
+
+.welcome-experience-photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.btn-outline-secondary:not(.active):hover:active {
+    background-color: white !important;
+    color: #6c757d;
+}
+
+.btn-outline-secondary:not(.active):hover {
+    background-color: white !important;
+    color: #6c757d;
+}
+
+.fix-margin {
+    margin-left: 0;
+    margin-right: 0;
+}
