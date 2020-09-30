@@ -37,7 +37,7 @@ def librarysort(request: WSGIRequest, method: str = None) -> HttpResponse:
     :param method: the string which determines how to sort the results.
     :return:
     """
-    html = "library.html"
+    html = "vue/library.vue"
 
     data = build_data_dict(request, library=True)
     items = get_swatches(data)
